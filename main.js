@@ -98,13 +98,13 @@ function deleteDorF() {
                 showMenu();
             } else {
                 if (stats.isDirectory()) {
-                    fs.rmdir(fileName, (err) => {
+                    fs.rmdir(cd+fileName, (err) => {
                         if (err) throw err;
                         console.log(`Папку ${fileName} видалено`);
                         showMenu();
                     });
                 } else {
-                    fs.unlink(fileName, (err) => {
+                    fs.unlink(cd+fileName, (err) => {
                         if (err) throw err;
                         console.log(`Файл ${fileName} видалено`);
                         showMenu();
